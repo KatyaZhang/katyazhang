@@ -1,20 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- 首要方案：优先使用无JS的 meta 刷新标签，确保基础跳转 -->
+    <!-- 默认跳转到中文页，作为最基础的保底方案 -->
+    <meta http-equiv="refresh" content="0; url=/_i18n/zh/index.html">
+    
+    <title>Redirecting... | 跳转中 | Перенаправление</title>
+    
     <script>
-        var userLang = navigator.language || navigator.userLanguage;
-        // 检测浏览器语言是否为俄语或相关变体
-        if(userLang.startsWith('ru')) {
-            window.location.href = '/_i18n/ru/index.html';
-        } else {
-            // 其他所有语言（包括中文）默认跳转到中文页
-            window.location.href = '/_i18n/zh/index.html';
-        }
+        // 增强的JavaScript跳转方案，在 meta 标签基础上提供更智能的判断
+        (function() {
+            // 1. 更兼容的浏览器语言检测（优先标准属性）
+            var userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            
+            // 2. 定义目标路径
+            var targetUrl = '/_i18n/zh/index.html'; // 默认中文
+            
+            // 3. 判断逻辑：检测俄语及其变种 (ru, ru-RU, ru-UA等)
+            if (userLang.startsWith('ru')) {
+                targetUrl = '/_i18n/ru/index.html';
+            }
+            // 未来可以轻松扩展其他语言，例如：
+            // else if (userLang.startsWith('en')) {
+            //     targetUrl = '/_i18n/en/index.html';
+            // }
+            
+            // 4. 执行跳转 (设置一个很短的时间，避免与 meta 标签冲突)
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, 50); // 50毫秒的极短延迟，确保优先执行
+        })();
     </script>
-    <title>Redirecting...</title>
+    
+    <style>
+        /* 基础样式，确保页面在跳转前看起来舒适 */
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px 20px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 30px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .lang-links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        .lang-links a {
+            display: inline-block;
+            margin: 0 10px;
+            padding: 8px 16px;
+            background: #eee;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+        }
+        .lang-links a:hover {
+            background: #ddd;
+        }
+    </style>
 </head>
 <body>
-    <p>Redirecting... <a href="/_i18n/zh/index.html">Click here if not redirected.</a></p>
+    <div class="container">
+        <!-- 加载动画，提升等待体验 -->
+        <div class="spinner"></div>
+        
+        <h1>正在为您跳转到合适的语言页面...</h1>
+        <h1>Redirecting to your language...</h1>
+        <h1>Перенаправление на ваш язык...</h1>
+        
+        <p>如果页面没有自动跳转，或者您想手动选择语言，请使用以下链接：</p>
+        <p>If the page does not redirect automatically, please use the links below:</p>
+        <p>Если страница не перенаправляется автоматически, используйте ссылки:</p>
+        
+        <!-- 手动语言选择链接，作为终极降级方案 -->
+        <div class="lang-links">
+            <a href="/_i18n/zh/index.html">中文网站 (Chinese)</a>
+            <a href="/_i18n/ru/index.html">Русский сайт (Russian)</a>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9em; color: #777;">
+            本页面将在2秒内自动跳转。This page will auto-redirect in 2 seconds.
+        </p>
+    </div>
 </body>
 </html>
