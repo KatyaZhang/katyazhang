@@ -121,6 +121,21 @@ footer a:hover {
     text-decoration: underline;
 }
 
+/* 响应式设计：小屏幕适配 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 2em;
+    }
+    .content-box {
+        padding: 20px;
+    }
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
 /* 语言下拉菜单样式 */
 .language-switcher {
     position: relative;
@@ -157,19 +172,4 @@ footer a:hover {
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
-/* 响应式设计：小屏幕适配 */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-    header h1 {
-        font-size: 2em;
-    }
-    .content-box {
-        padding: 20px;
-    }
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
 }
