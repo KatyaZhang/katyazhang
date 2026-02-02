@@ -18,8 +18,13 @@
             <a href="#about">Обо мне</a> |
             <a href="#translation">Услуги перевода</a> |
             <a href="#travel">Трэвел-консалтинг</a> |
-            <!-- 语言切换器 -->
-            <span style="margin-left:20px;">Язык: <a href="/_i18n/zh/index.html">中文</a> | <strong>Русский</strong></span>
+            <!-- 下拉菜单语言切换 -->
+            <span class="language-switcher">
+                <select class="language-select" onchange="switchLanguage(this)">
+                    <option value="ru" selected>Русский 🇷🇺</option>
+                    <option value="zh">中文 🇨🇳</option>
+                </select>
+            </span>
         </nav>
     </header>
 
@@ -82,5 +87,18 @@
             <a href="mailto:hannahzch@163.com">Email</a> | 
         </p>
     </footer>
+<!-- 在页面底部（</body>之前）添加脚本 -->
+<script>
+function switchLanguage(select) {
+    const lang = select.value;
+    const basePath = '/_i18n'; // 根据实际路径调整
+    
+    // 获取当前页面路径，用于保持锚点位置
+    const currentHash = window.location.hash;
+    const targetUrl = `${basePath}/${lang}/index.html${currentHash}`;
+    
+    window.location.href = targetUrl;
+}
+</script>
 </body>
 </html>
