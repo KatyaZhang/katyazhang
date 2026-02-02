@@ -87,18 +87,5 @@
             <a href="mailto:hannahzch@163.com">Email</a> | 
         </p>
     </footer>
-    <!-- 在页面底部（</body>之前）添加脚本 -->
-    <script>
-    function switchLanguage(select) {
-        const lang = select.value;
-        const basePath = '/_i18n'; // 根据实际路径调整
-        
-        // 获取当前页面路径，用于保持锚点位置
-        const currentHash = window.location.hash;
-        const targetUrl = `${basePath}/${lang}/index.html${currentHash}`;
-        
-        window.location.href = targetUrl;
-    }
-    </script>
 </body>
 </html>
