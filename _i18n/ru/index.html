@@ -9,6 +9,19 @@
         body { font-family: 'Helvetica Neue', Arial, sans-serif; }
         .service-box { border-left: 4px solid #0055A5; } /* 俄罗斯国旗蓝色 */
     </style>
+    <script>
+        function switchLanguage(select) {
+            var lang = select.value;
+            if (lang === 'ru') {
+                // 如果已经在俄语页面，不跳转
+                if (!window.location.href.includes('/_i18n/ru/')) {
+                    window.location.href = '/_i18n/ru/index.html';
+                }
+            } else if (lang === 'zh') {
+                window.location.href = '/_i18n/zh/index.html';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
