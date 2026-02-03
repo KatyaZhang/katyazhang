@@ -9,6 +9,20 @@
         body { font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif; }
         .service-box { border-left: 4px solid #DE2910; } /* 中国国旗红色 */
     </style>
+    <!-- 添加语言切换函数 -->
+    <script>
+        function switchLanguage(select) {
+            var lang = select.value;
+            if (lang === 'zh') {
+                // 如果已经在中文页面，不跳转
+                if (!window.location.href.includes('/_i18n/zh/')) {
+                    window.location.href = '/_i18n/zh/index.html';
+                }
+            } else if (lang === 'ru') {
+                window.location.href = '/_i18n/ru/index.html';
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -18,8 +32,13 @@
             <a href="#translation">翻译服务</a> |
             <a href="#website">俄语网站</a> |
             <a href="#marketing">市场营销</a> |
-            <!-- 语言切换器 -->
-            <span style="margin-left:20px;">语言: <strong>中文</strong> | <a href="/_i18n/ru/index.html">Русский</a></span>
+            <!-- 下拉菜单语言切换 -->
+            <span class="language-switcher">
+                <select class="language-select" onchange="switchLanguage(this)">
+                    <option value="zh" selected>中文 🇨🇳</option>
+                    <option value="ru">Русский 🇷🇺</option>
+                </select>
+            </span>
         </nav>
     </header>
 
@@ -64,19 +83,19 @@
                 <h3>服务内容：</h3>
                 <ul>
                     <li><strong>市场调研与分析</strong>：竞争对手分析、目标用户画像、渠道调研</li>
-                    <li><strong>社媒营销</strong>：ВКонтакте (VK)、Одноклассники、Telegram渠道运营与广告投放</li>
+                    <li><strong>社媒营销</strong>：ВКонтакte (VK)、Одноклассники、Telegram渠道运营与广告投放</li>
                     <li><strong>网红营销</strong>：对接俄罗斯相关领域的博主(KOL)进行产品推广</li>
                     <li><strong>品牌公关</strong>：在俄罗斯行业媒体发布新闻稿，提升品牌知名度</li>
                 </ul>
             </div>
-            <p>我们深刻理解中俄商业文化差异，能帮助您的品牌避免“水土不服”，在俄罗斯市场顺利落地。</p>
+            <p>我们深刻理解中俄商业文化差异，能帮助您的品牌避免"水土不服"，在俄罗斯市场顺利落地。</p>
         </section>
 
         <!-- 联系板块 -->
         <section class="content-box" style="background-color:#f9f9f9; text-align:center;">
             <h2>💼 让我们开始合作</h2>
             <p>无论您需要其中一项服务，还是全套解决方案，我都将为您提供专业的咨询。</p>
-            <p><strong>第一步：</strong> <a href="mailto:li.ming@example.com">发送邮件</a> 简要说明您的需求，我将为您提供一份初步的方案与报价。</p>
+            <p><strong>第一步：</strong> <a href="mailto:hannahzch@163.com">发送邮件</a> 简要说明您的需求，我将为您提供一份初步的方案与报价。</p>
         </section>
     </main>
 
