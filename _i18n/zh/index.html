@@ -2,12 +2,45 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>专业翻译与俄语市场服务</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>专业中俄翻译与俄语市场综合服务</title>
+    <link rel="stylesheet" href="/assets/css/style.css?v=20250203">
     <style>
         /* 中文页面独有样式 */
         body { font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif; }
         .service-box { border-left: 4px solid #DE2910; } /* 中国国旗红色 */
+        
+        /* 新增板块特殊样式 */
+        .highlight-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
     </style>
     <!-- 添加语言切换函数 -->
     <script>
@@ -27,11 +60,13 @@
 <body>
     <header>
         <h1>Hannah Zhang</h1>
-        <p class="tagline">专业中俄翻译 · 俄语网站建设 · 俄罗斯市场顾问</p>
+        <p class="tagline">专业中俄翻译 · 俄语市场开发 · 俄语国家会展服务 · 全方位俄语市场解决方案</p>
         <nav>
             <a href="#translation">翻译服务</a> |
             <a href="#website">俄语网站</a> |
             <a href="#marketing">市场营销</a> |
+            <a href="#client-dev">客户开发</a> |
+            <a href="#exhibition">会展服务</a> |
             <!-- 下拉菜单语言切换 -->
             <span class="language-switcher">
                 <select class="language-select" onchange="switchLanguage(this)">
@@ -46,63 +81,205 @@
         <!-- 板块1: 翻译服务 -->
         <section id="translation" class="content-box service-box">
             <h2>📝 专业翻译服务</h2>
-            <p>提供<strong>准确、地道、专业</strong>的中俄互译服务，助您打破语言壁垒。</p>
+            <p>提供<strong>准确、地道、专业</strong>的中俄互译服务，助您打破语言壁垒，精准传达信息。</p>
             <div class="service">
                 <h3>核心服务领域：</h3>
                 <ul>
-                    <li><strong>技术文档翻译</strong>：产品说明书、技术手册、专利文献</li>
-                    <li><strong>商务法律翻译</strong>：合同、标书、公司注册文件、公证材料</li>
-                    <li><strong>本地化翻译</strong>：软件、游戏、APP界面及宣传材料</li>
+                    <li><strong>技术文档翻译</strong>：产品说明书、技术手册、专利文献、标准认证文件</li>
+                    <li><strong>商务法律翻译</strong>：合同、标书、公司注册文件、公证材料、法律意见书</li>
+                    <li><strong>本地化翻译</strong>：软件、游戏、APP界面及宣传材料，确保符合当地文化习惯</li>
                     <li><strong>口译服务</strong>：商务陪同、会议交替传译、远程视频口译</li>
+                    <li><strong>专业认证</strong>：所有俄语文案均由母语译员审校，持有CATTI俄语翻译资格证书</li>
                 </ul>
             </div>
-            <p><strong>我们的优势</strong>：所有俄语文案均由母语译员审校，确保符合俄罗斯语言习惯与文化背景。</p>
         </section>
 
         <!-- 板块2: 俄语网站 -->
         <section id="website" class="content-box service-box">
             <h2>🌐 俄语网站建设与优化</h2>
-            <p>不只是翻译，更是为您打造<em>真正适合俄语用户的网站体验</em>。</p>
+            <p>不只是翻译，更是为您打造<em>真正适合俄语用户的网站体验</em>，提升转化率。</p>
             <div class="service">
                 <h3>一站式服务：</h3>
                 <ul>
-                    <li><strong>网站俄语本地化</strong>：全站内容翻译、图文适配、支付方式本地集成</li>
-                    <li><strong>俄语SEO优化</strong>：针对Яндекс和Google进行关键词研究、内容优化、外链建设</li>
-                    <li><strong>俄语CMS支持</strong>：为您培训团队，轻松更新俄语内容</li>
-                    <li><strong>性能与合规</strong>：确保网站在俄罗斯访问速度快，并符合当地数据保护要求</li>
+                    <li><strong>网站俄语本地化</strong>：全站内容翻译、图文适配、支付方式本地集成（Яндекс.Деньги, QIWI等）</li>
+                    <li><strong>俄语SEO优化</strong>：针对Яндекс和Google进行关键词研究、内容优化、外链建设、本地搜索排名提升</li>
+                    <li><strong>俄语CMS支持</strong>：为您培训团队，建立俄语内容更新流程，确保信息时效性</li>
+                    <li><strong>性能与合规</strong>：确保网站在俄语国家访问速度快，并符合当地数据保护要求（ФЗ-152）</li>
+                    <li><strong>移动端适配</strong>：针对俄语用户常用的移动设备和浏览器进行专门优化</li>
                 </ul>
             </div>
-            <p>已成功为12家中国跨境电商、3家工业设备制造商打造了高效转化的俄语官网。</p>
         </section>
 
         <!-- 板块3: 市场营销 -->
         <section id="marketing" class="content-box service-box">
-            <h2>📈 俄罗斯市场综合营销</h2>
-            <p>深入俄罗斯市场，制定有效的数字化营销策略。</p>
+            <h2>📈 俄罗斯及俄语国家市场综合营销</h2>
+            <p>深入俄语国家市场，制定有效的数字化营销策略，建立品牌影响力。</p>
             <div class="service">
                 <h3>服务内容：</h3>
                 <ul>
-                    <li><strong>市场调研与分析</strong>：竞争对手分析、目标用户画像、渠道调研</li>
-                    <li><strong>社媒营销</strong>：ВКонтакte (VK)、Одноклассники、Telegram渠道运营与广告投放</li>
-                    <li><strong>网红营销</strong>：对接俄罗斯相关领域的博主(KOL)进行产品推广</li>
-                    <li><strong>品牌公关</strong>：在俄罗斯行业媒体发布新闻稿，提升品牌知名度</li>
+                    <li><strong>市场调研与分析</strong>：竞争对手分析、目标用户画像、渠道调研、市场进入策略制定</li>
+                    <li><strong>社媒营销</strong>：ВКонтакте (VK)、Одноклассники、Telegram渠道运营与广告投放、社群管理</li>
+                    <li><strong>网红营销</strong>：对接俄罗斯及独联体国家相关领域的博主(KOL)进行产品推广，制定合作方案</li>
+                    <li><strong>品牌公关</strong>：在俄罗斯行业媒体发布新闻稿，媒体关系维护，提升品牌知名度</li>
+                    <li><strong>内容营销</strong>：创建符合俄语用户喜好的高质量内容，建立行业权威</li>
                 </ul>
             </div>
-            <p>我们深刻理解中俄商业文化差异，能帮助您的品牌避免"水土不服"，在俄罗斯市场顺利落地。</p>
+            <p>我们深刻理解中俄商业文化差异，能帮助您的品牌避免"水土不服"，在俄语国家市场顺利落地并建立长期竞争优势。</p>
+        </section>
+
+        <!-- 板块4: 客户开发服务（新增） -->
+        <section id="client-dev" class="content-box service-box">
+            <h2>👥 俄语国家客户开发服务</h2>
+            <p>专业的B2B客户开发解决方案，帮助您精准开拓俄语国家市场，建立稳定的客户渠道。</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>目标客户识别</h3>
+                    <ul>
+                        <li>行业分析与目标客户画像</li>
+                        <li>潜在客户数据库建设</li>
+                        <li>采购决策链分析</li>
+                        <li>竞争对手客户分析</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>客户开发策略</h3>
+                    <ul>
+                        <li>多渠道开发方案定制</li>
+                        <li>本地化销售材料准备</li>
+                        <li>客户接触点设计</li>
+                        <li>开发节奏与流程规划</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>沟通与跟进</h3>
+                    <ul>
+                        <li>俄语商务邮件模板设计</li>
+                        <li>电话开发脚本优化</li>
+                        <li>社媒开发策略执行</li>
+                        <li>跟进系统建立</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="service">
+                <h3>核心服务流程：</h3>
+                <ol style="padding-left: 25px; margin: 15px 0;">
+                    <li><strong>市场分析阶段</strong>：深入了解您的产品/服务，分析俄语国家市场潜力和竞争格局</li>
+                    <li><strong>目标客户定位</strong>：确定最适合的客户群体，建立潜在客户数据库</li>
+                    <li><strong>开发材料准备</strong>：制作俄语版公司介绍、产品目录、案例展示等材料</li>
+                    <li><strong>多渠道接触</strong>：通过邮件、电话、社媒、行业平台等多渠道接触潜在客户</li>
+                    <li><strong>商机转化支持</strong>：协助安排会议、准备谈判材料、提供翻译支持</li>
+                    <li><strong>客户关系维护</strong>：协助建立客户关系管理系统，制定长期维护策略</li>
+                </ol>
+            </div>
+            
+            <div style="margin-top: 20px; padding: 20px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border-radius: 10px; border-left: 4px solid #22c55e;">
+                <h4 style="color: #166534; margin-bottom: 10px;">💎 我们的优势：</h4>
+                <ul>
+                    <li>熟悉俄语国家商业文化和谈判习惯，避免文化误解</li>
+                    <li>掌握多种俄语国家商业数据库和行业资源</li>
+                    <li>成功帮助多家中国企业开发俄语国家客户，平均<span class="highlight-badge">客户开发成本降低40%</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 板块5: 俄语国家会展服务（新增） -->
+        <section id="exhibition" class="content-box service-box">
+            <h2>🎪 俄语国家会展综合服务</h2>
+            <p>一站式俄语国家展会解决方案，从展前准备到展后跟进，全程专业支持。</p>
+            
+            <div class="service">
+                <h3>展前准备服务：</h3>
+                <ul>
+                    <li><strong>展会选择与评估</strong>：根据您的产品和目标市场，推荐最适合的俄语国家展会</li>
+                    <li><strong>展位设计与搭建</strong>：提供符合当地审美和功能需求的展位设计方案，协调本地搭建商</li>
+                    <li><strong>展会材料准备</strong>：翻译并设计俄语版宣传册、产品目录、名片、展示视频等</li>
+                    <li><strong>展前推广</strong>：通过当地媒体和行业渠道进行展前宣传，吸引目标观众</li>
+                    <li><strong>行程与后勤安排</strong>：机票、酒店、当地交通、签证支持等全方位安排</li>
+                </ul>
+            </div>
+            
+            <div class="service">
+                <h3>展会现场服务：</h3>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <h4>翻译与接待</h4>
+                        <ul>
+                            <li>专业俄语翻译全程陪同</li>
+                            <li>客户接待与产品讲解</li>
+                            <li>商务谈判支持</li>
+                            <li>文化礼仪指导</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>商务拓展</h4>
+                        <ul>
+                            <li>潜在客户识别与接触</li>
+                            <li>竞争对手情报收集</li>
+                            <li>行业趋势分析</li>
+                            <li>本地合作伙伴发掘</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h4>活动支持</h4>
+                        <ul>
+                            <li>新产品发布会组织</li>
+                            <li>客户会议安排</li>
+                            <li>媒体采访协调</li>
+                            <li>现场问题解决</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service">
+                <h3>展后跟进服务：</h3>
+                <ul>
+                    <li><strong>客户数据整理</strong>：系统化整理展会收集的客户信息，建立客户档案</li>
+                    <li><strong>跟进策略制定</strong>：根据客户分类制定差异化的跟进策略</li>
+                    <li><strong>俄语跟进材料</strong>：准备个性化的俄语跟进邮件、报价单等材料</li>
+                    <li><strong>效果评估报告</strong>：提供详细的展会效果评估和改进建议</li>
+                    <li><strong>长期关系维护</strong>：协助建立与展会客户的长期联系机制</li>
+                </ul>
+            </div>
+            
         </section>
 
         <!-- 联系板块 -->
-        <section class="content-box" style="background-color:#f9f9f9; text-align:center;">
-            <h2>💼 让我们开始合作</h2>
-            <p>无论您需要其中一项服务，还是全套解决方案，我都将为您提供专业的咨询。</p>
-            <p><strong>第一步：</strong> <a href="mailto:hannahzch@163.com">发送邮件</a> 简要说明您的需求，我将为您提供一份初步的方案与报价。</p>
+        <section class="content-box" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); text-align: center; border-left: 4px solid #8b5cf6;">
+            <h2 style="color: #6d28d9;">💼 让我们开始合作</h2>
+            <p style="font-size: 1.1em; margin-bottom: 20px;">无论您需要其中一项服务，还是全套俄语市场解决方案，我都将为您提供专业的咨询和定制化服务。</p>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <h3 style="color: #6d28d9; margin-bottom: 15px;">📞 合作流程：</h3>
+                <ol style="padding-left: 25px; margin-bottom: 25px;">
+                    <li><strong>需求沟通</strong>：通过邮件或视频会议了解您的具体需求和目标</li>
+                    <li><strong>方案制定</strong>：根据您的需求制定详细的实施方案和时间表</li>
+                    <li><strong>报价确认</strong>：提供透明的服务报价，确认合作细节</li>
+                    <li><strong>服务执行</strong>：按计划执行服务，定期汇报进展</li>
+                    <li><strong>效果评估</strong>：服务结束后提供效果评估和后续建议</li>
+                </ol>
+            </div>
+            
+            <p><strong>第一步：</strong> <a href="mailto:hannahzch@163.com" style="font-weight: bold; color: #2563eb;">发送邮件至 hannahzch@163.com</a> 简要说明您的需求，我将为您提供一份初步的方案与报价。</p>
+            <p style="margin-top: 15px; color: #475569; font-size: 0.95em;">通常在24小时内回复，紧急需求请注明"紧急"。</p>
         </section>
     </main>
 
     <footer>
-        <p>© 2026 Hannah. 版权所有.</p>
+        <p>© 2026 Hannah Zhang. 版权所有.</p>
         <p><strong>联系方式：</strong>
-            <a href="mailto:hannahzch@163.com">电子邮件</a> |
+            <a href="mailto:hannahzch@163.com">电子邮件</a> | 
+            <a href="https://wa.me/861234567890" target="_blank">WhatsApp</a> |
+            <a href="https://t.me/hannahzhang" target="_blank">Telegram</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 0.9em; color: #cbd5e1;">
+            <em>专业领域：中俄翻译 · 俄语市场开发 · 俄语国家会展服务 · 俄语数字营销</em>
         </p>
     </footer>
 </body>
